@@ -48,6 +48,6 @@
 
   programs.neovim = {
     enable = true;
-    package = pkgs.vimPlugins.LazyVim;
+    # package = pkgs.vimPlugins.LazyVim; ???
   }
 }
