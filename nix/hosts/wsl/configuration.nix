@@ -48,6 +48,9 @@
 
   programs.neovim = {
     enable = true;
-    # package = pkgs.vimPlugins.LazyVim; ???
+
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
   }
-}
+    }
