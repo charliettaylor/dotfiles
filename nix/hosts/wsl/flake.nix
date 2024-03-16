@@ -28,7 +28,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.charlie = import ./home.nix;
+            home-manager.users.charlie = import /etc/nixos/dotfiles/nix/shared/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }

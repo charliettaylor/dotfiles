@@ -11,12 +11,16 @@
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
-    ../../shared/cli.nix
+    /etc/nixos/dotfiles/nix/shared/cli.nix
   ];
 
   wsl.enable = true;
   wsl.defaultUser = "charlie";
 
+  nix.nixpath = [
+    # fat ass path but i dont care
+    { path = "/etc/nixos/dotfiles/nix/hosts/wsl/configuration.nix"; prefix = "nixos-config"; }
+  ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "23.11";
 
@@ -48,6 +52,5 @@
 
   programs.neovim = {
     enable = true;
-    # package = pkgs.vimPlugins.LazyVim; ???
-  }
+  };
 }
