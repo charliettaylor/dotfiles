@@ -5,7 +5,9 @@ all the stuff I want for setting stuff up
 ## nvim
 
 ```
+# Linux
 cp -r ./nvim/ ~/.config/nvim/
+# Powershell
 Move-Item ./nvim/ ~/AppData/Local/nvim/
 ```
 
@@ -19,5 +21,5 @@ choco install ripgrep
 sudo apt-get install ripgrep
 
 # Links
-![ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
+https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
 ```
