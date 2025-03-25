@@ -6,7 +6,7 @@ all the stuff I want for setting stuff up
 
 ```
 # Linux
-cp -r ./nvim/ ~/.config/nvim/
+ln -s ~/dotfiles/nvim ~/.config/nvim
 # Powershell
 Move-Item ./nvim/ ~/AppData/Local/nvim/
 ```
