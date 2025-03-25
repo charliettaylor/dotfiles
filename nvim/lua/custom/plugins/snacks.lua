@@ -2,6 +2,7 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
+  ---@module 'snacks'
   ---@type snacks.Config
   opts = {
     -- your configuration comes here
@@ -33,6 +34,25 @@ return {
     scope = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
+    terminal = {
+      enabled = true,
+      win = {
+        style = 'terminal',
+        border = vim.g.border_style,
+        position = 'float',
+        height = 0.8,
+        width = 0.8,
+      },
+    },
     words = { enabled = true },
+  },
+  keys = {
+    {
+      '<leader>tt',
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = '[T]oggle [T]erminal',
+    },
   },
 }
