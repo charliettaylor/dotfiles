@@ -11,18 +11,24 @@ return {
     bigfile = { enabled = true },
     dashboard = {
       enabled = true,
+      preset = {
+        -- Used by the `header` section
+        header = [[                                                                      
+                                                                    
+      ████ ██████           █████      ██                     
+     ███████████             █████                             
+     █████████ ███████████████████ ███   ███████████   
+    █████████  ███    █████████████ █████ ██████████████   
+   █████████ ██████████ █████████ █████ █████ ████ █████   
+ ███████████ ███    ███ █████████ █████ █████ ████ █████  
+██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+      },
       sections = {
-        {
-          section = 'terminal',
-          cmd = 'chafa ~/.config/wall.png --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1',
-          height = 17,
-          padding = 1,
-        },
-        {
-          pane = 2,
-          { section = 'keys', gap = 1, padding = 1 },
-          { section = 'startup' },
-        },
+        { section = 'header' },
+        { icon = ' ', title = 'Keymaps', section = 'keys', indent = 2, padding = 1 },
+        { icon = ' ', title = 'Recent Files', section = 'recent_files', indent = 2, padding = 1 },
+        { icon = ' ', title = 'Projects', section = 'projects', indent = 2, padding = 1 },
+        { section = 'startup' },
       },
     },
     explorer = { enabled = true },
