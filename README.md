@@ -2,6 +2,14 @@
 
 all the stuff I want for setting stuff up
 
+## flox
+[Install](https://flox.dev/docs/install-flox/)
+
+[My Default](https://hub.flox.dev/charliettaylor/default)
+```bash
+flox pull charliettaylor/default
+```
+
 ## nvim
 
 ```
